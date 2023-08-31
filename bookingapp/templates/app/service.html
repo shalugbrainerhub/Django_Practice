@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All services are here.</h1>
+    <ul>
+        {% for service in allServices %}
+        <li>{{service.name}}</li>
+        <li>{{service.description}}</li>
+        <li>{{service.duration}}</li>
+        <li>{{service.price}}</li>
+        <hr>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}">Home</a>
+</body>
+</html>

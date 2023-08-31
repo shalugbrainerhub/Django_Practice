@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        {% for booking in allBooking %}
+
+        <li>{{ booking.user.username }}</li>
+        <li>{{ booking.status}}</li>
+        <li>{{ booking.payment_status }}</li>
+        <li>{{ booking.reminder_status }}</li>
+        <hr>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}">Home</a>
+</body>
+</html>

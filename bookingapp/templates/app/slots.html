@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>All slots are here.</h1>
+
+<ul>
+  {{ allSlots }}
+
+  {% for slot in allSlots %}
+  <li>{{slot.start}}</li>
+  <li>{{slot.services.name}}</li>
+  <li>{{slot.capacity}}</li>
+  <li>{{slot.available}}</li>
+  <hr>
+  {% endfor %}
+</ul>
+    <a href="{% url 'home' %}">Home</a>
+</body>
+</html>
