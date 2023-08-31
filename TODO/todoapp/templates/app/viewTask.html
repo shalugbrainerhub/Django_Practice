@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="{% url 'addTask'%}">Add</a>
+
+
+    <h1>Here is list having all tasks.</h1>
+   <ul>
+    {% for task in allTask %}
+    <li>{{task.title}}</li>
+    <li>{{task.completed}}</li>
+    <li>{{task.created}}</li>
+    <a href="{% url 'updateTask' task.id %}">Update</a>
+    <a href="{% url 'deleteTask' task.id %}">Delete</a>
+    <hr>
+   
+    {% endfor %}
+   </ul>
+</body>
+</html>
